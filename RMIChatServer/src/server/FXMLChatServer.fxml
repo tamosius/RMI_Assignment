@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="server.FXMLChatServerController">
+    <stylesheets>
+        <URL value="@server.css" />
+    </stylesheets>
+   <children>
+      <Pane layoutX="-1.0" layoutY="6.0" prefHeight="395.0" prefWidth="600.0">
+         <children>
+            <TextArea fx:id="mainTextArea" layoutX="14.0" layoutY="56.0" prefHeight="325.0" prefWidth="386.0" />
+            <TextArea fx:id="clientsNamesTextArea" layoutX="415.0" layoutY="19.0" prefHeight="361.0" prefWidth="171.0" />
+            <Label layoutX="426.0" layoutY="22.0" opacity="0.7" text="Clients on Network:" textFill="#2e116b">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font></Label>
+            <Label fx:id="numberOfClients" layoutX="547.0" layoutY="23.0" opacity="0.7" textFill="#1e1054">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </Label>
+            <Button fx:id="startServerButton" layoutX="322.0" layoutY="19.0" mnemonicParsing="false" onAction="#startServer" text="Start Server" textFill="#2d1268">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </Button>
+            <TextField fx:id="ipAddressField" layoutX="14.0" layoutY="19.0" onAction="#startServer" prefHeight="25.0" prefWidth="299.0" promptText="specify IP address or leave blank (localhost by default)">
+               <font>
+                  <Font size="11.8" />
+               </font>
+            </TextField>
+         </children>
+         <effect>
+            <InnerShadow color="#4a4197" />
+         </effect>
+      </Pane>
+   </children>
+</AnchorPane>

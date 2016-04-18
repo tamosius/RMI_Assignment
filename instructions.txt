@@ -1,0 +1,28 @@
+                                      INSTRUCTIONS HOW TO COMPILE AND RUN THE APPLICATION
+                                      ==================================================
+
+A Java Development kit (JDK now lower than 1.8) must be available in order to run this project.
+
+This RMI design based chat system has been written using Netbeans IDE. The source files for chat server and chat client are located at 'RMIChatServer' and 'RMIChatClient' forlders.
+To find java source code (not compiled '.java' files) for chat server please navigate to 'RMIChatServer\src\server' folder and '.java' files of chat clients : 'RMIChatClient\src\client' folder. 
+To find all compiled '.class' files please navigate to 'RMIChatServer\build\classes\server' and 'RMIChatClient\build\classes\client' folders.
+The all class files are already compiled by Netbeans IDE and executable 'jar' files generated also.
+
+Next, we must compile remote chat server 'FXMLChatServerController.class' file, using rmic compiler to produce a stub class, which performs the network communication necessary to invoke the method calls on remote object. The command line:
+
+                          'cd RMIChatServer\build\classes'
+
+                                      then
+
+                          'rmic server.FXMLChatServerController'
+
+generates the file 'FXMLChatServerController_Stub.class' file (already done). This file will be available for the clients to enable remote object calls.
+
+
+Start server and clients (more text field instructions please find on open GUI's when the program starts):
+============================================================================================================
+1. The simplest way to start the chat server and the chat clients is to double click on executable 'RMIChatServer.jar' and 'RMIChatClients.jar' files located at 'RMIChatServer\dist' and 'RMIChatClient\dist' folders.
+
+2. Execute the 'jar' files from command line, type: 'java -jar RMIChatServer\dist\RMIChatServer.jar' for the server and 'java -jar RMIChatServer\dist\RMIChatServer.jar' for the client to start.
+
+2. Start server by executing 'StartChatServer.class' file, navigate to 'classes' folder by typing 'cd RMIChatServer\build\classes' for the server and type 'RMIChatClient\build\classes' for the client, and then execute the '.class' files by typing 'java server.StartChatServer' and 'java client.StartChatClient'.

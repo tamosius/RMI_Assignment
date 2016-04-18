@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="RMIChatClient.jnlp">
+  <information>
+    <title>RMIChatClient</title>
+    <vendor>Tomas</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="RMIChatClient.jar" size="8766" download="eager" />
+    <jar href="lib\RMIChatServer.jar" size="8363" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="RMIChatClient" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="client.StartChatClient"  name="RMIChatClient" />
+  <update check="always"/>
+</jnlp>
